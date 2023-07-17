@@ -1,0 +1,121 @@
+:root {
+   --orange: hsl(25, 97%, 53%);
+   --white: hsl(0, 0%, 100%);
+   --lightGrey: hsl(217, 12%, 63%);
+   --mediumGrey: hsl(216, 12%, 54%);
+   --darkBlue: hsl(213, 19%, 18%);
+   --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+   font-family: "Overpass", sans-serif;
+   background-color: var(--veryDarkBlue);
+}
+
+h1 {
+   color: var(--white);
+}
+
+p {
+   color: var(--lightGrey);
+}
+
+.container {
+   background-color: var(--darkBlue);
+
+   position: absolute;
+   width: 30%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 2rem;
+}
+
+.card {
+   padding: 2rem;
+}
+
+.card-star img {
+   padding: 0.8rem;
+   border-radius: 50%;
+   background-color: var(--veryDarkBlue);
+}
+
+.card-rating {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 8px;
+}
+.rating-num {
+   text-decoration: none;
+   color: var(--lightGrey);
+   border-radius: 50%;
+   width: 48px;
+   height: 48px;
+   padding: 0.4rem;
+   border: none;
+   background-color: var(--veryDarkBlue);
+   cursor: pointer;
+   font-size: 1rem;
+   font-weight: bold;
+}
+
+.rating-num:hover {
+   background-color: var(--mediumGrey);
+   color: var(--white);
+}
+
+.rating-num:focus {
+   background-color: var(--orange);
+   color: var(--white);
+}
+#btn {
+   background-color: var(--orange);
+   text-transform: uppercase;
+   color: var(--white);
+   width: 100%;
+   padding: 0.8rem;
+   border: none;
+   border-radius: 2rem;
+   letter-spacing: 2px;
+   margin-top: 1.5rem;
+   cursor: pointer;
+}
+
+#btn:hover {
+   background-color: var(--white);
+   color: var(--orange);
+}
+/*! Thanks Card */
+.t-card {
+   display: none;
+   text-align: center;
+   padding: 2rem;
+}
+
+.t-rating-count {
+   color: var(--orange);
+   background-color: var(--veryDarkBlue);
+   border-radius: 2rem;
+   padding: 0.5rem;
+   margin: 1rem 3rem;
+}
+
+/*! Tablet Media query */
+@media only screen and (max-width: 768px) {
+   .container {
+      width: 50%;
+   }
+}
+
+/*! Mobile Media query */
+@media only screen and (max-width: 480px) {
+   .container {
+      width: 80%;
+   }
+
+   .t-rating-count {
+      margin: 1rem;
+   }
+}
